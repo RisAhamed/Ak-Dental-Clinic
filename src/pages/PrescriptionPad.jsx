@@ -149,12 +149,12 @@ function PrescriptionPad() {
                 word-break: break-word;
                 overflow-wrap: break-word;
                 min-height: ${computed.height};
-                width: ${computed.width};
+                width: auto;
                 box-sizing: ${computed.boxSizing};
                 text-align: ${computed.textAlign};
-                display: block;
-                flex: ${computed.flex};
-                min-width: 0;
+                display: ${computed.display};
+                vertical-align: ${computed.verticalAlign};
+                min-width: ${computed.minWidth || '0'};
             `;
             div.textContent = value;
             field.parentNode.insertBefore(div, field);
