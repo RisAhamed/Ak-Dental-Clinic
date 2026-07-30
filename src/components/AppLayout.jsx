@@ -26,6 +26,7 @@ const consultationForms = [
   { label: 'Post-endodontic restoration', file: '/consultation-forms/post-endodontic-restorations.pdf' },
   { label: 'Restoration', file: '/consultation-forms/restoration.pdf' },
   { label: 'Root canal treatment', file: '/consultation-forms/root-canal-treatment.pdf' },
+  { label: 'Tooth extraction', file: '/consultation-forms/tooth-extraction.pdf' },
 ]
 
 const routeTitles = [

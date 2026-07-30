@@ -4,6 +4,7 @@ export const CONSULTATION_FORMS = [
   { id: 'post_endodontic', label: 'Post Endodontic Restorations', file: '/consultation-forms/post-endodontic-restorations.pdf' },
   { id: 'endodontic_surgery', label: 'Endodontic Surgery', file: '/consultation-forms/endodontic-surgery.pdf' },
   { id: 'esthetic', label: 'Esthetic Procedures', file: '/consultation-forms/esthetic-procedures.pdf' },
+  { id: 'tooth_extraction', label: 'Tooth Extraction', file: '/consultation-forms/tooth-extraction.pdf' },
 ]
 
 export function validateSignatureFile(file) {
