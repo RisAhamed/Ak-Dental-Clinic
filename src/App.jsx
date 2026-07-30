@@ -10,6 +10,7 @@ import PatientDetail from './pages/PatientDetail'
 import Patients from './pages/Patients'
 import Payments from './pages/Payments'
 import Search from './pages/Search'
+import PrescriptionPad from './pages/PrescriptionPad'
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/sessions/new/:patientId" element={<NewSession />} />
             <Route path="/sessions/edit/:sessionId" element={<EditSession />} />
           </Route>
+          <Route path="/prescription/:doctorId" element={<PrescriptionPad />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
