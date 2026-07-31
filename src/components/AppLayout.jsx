@@ -132,7 +132,7 @@ function AppLayout() {
             >
               <Menu className="h-5 w-5" />
             </button>
-            <h1 className={`absolute left-1/2 -translate-x-1/2 font-semibold tracking-normal text-slate-950 md:static md:translate-x-0 transition-all ${
+            <h1 className={`absolute left-1/2 -translate-x-1/2 font-semibold tracking-normal text-slate-950 md:static md:translate-x-0 md:ml-8 transition-all ${
               pageTitle.length > 25
                 ? 'text-xs md:text-sm'
                 : pageTitle.length > 15
@@ -245,7 +245,7 @@ function SidebarNav({ onNavigate, expanded = false, currentPath = '', consultati
               }}
             >
               <Icon className="h-5 w-5 shrink-0" />
-              <span className={expanded ? 'inline' : 'hidden'}>{item.label}</span>
+              <span className={expanded ? 'block' : 'hidden'}>{item.label}</span>
               {!expanded && (
                 <span className="pointer-events-none absolute left-full top-1/2 z-50 ml-3 hidden -translate-y-1/2 whitespace-nowrap rounded-md bg-slate-900 px-2.5 py-1.5 text-xs font-medium text-white opacity-0 shadow-lg transition group-hover:opacity-100 md:block">
                   {item.label}
@@ -257,7 +257,7 @@ function SidebarNav({ onNavigate, expanded = false, currentPath = '', consultati
       </div>
 
       <div className="mt-4 border-t border-white/5 pt-4">
-        <div className="mb-2 px-2 text-xs font-semibold uppercase text-slate-400">
+        <div className={`mb-2 px-2 text-xs font-semibold uppercase text-slate-400 ${expanded ? 'block' : 'hidden'}`}>
           Consultation forms
         </div>
         <div className="space-y-1 px-1">
@@ -285,7 +285,7 @@ function SidebarNav({ onNavigate, expanded = false, currentPath = '', consultati
       </div>
 
       <div className="mt-4 border-t border-white/5 pt-4">
-        <div className="mb-2 px-2 text-xs font-semibold uppercase text-slate-400">
+        <div className={`mb-2 px-2 text-xs font-semibold uppercase text-slate-400 ${expanded ? 'block' : 'hidden'}`}>
           Prescription pads
         </div>
         <div className="space-y-1 px-1">
