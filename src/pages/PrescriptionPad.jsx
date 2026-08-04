@@ -10,14 +10,14 @@ const doctorsData = {
     title: 'Professor, Conservative Dentist and Endodontist.',
     regNo: 'Reg. No : 7102',
     phone: '9884310206',
-    email: 'ashokbaskaran@gmail.com'
+    email: 'akdental2021@gmail.com'
   },
   mamta: {
     name: 'Dr. Mamta Singaram, MDS.,',
     title: 'Oral maxillo facial & Implant Surgeon',
     regNo: '',
-    phone: '9884310206',
-    email: 'ashokbaskaran@gmail.com'
+    phone: '95979 84160',
+    email: 'akdental2021@gmail.com'
   }
 };
 
