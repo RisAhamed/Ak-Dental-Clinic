@@ -4,6 +4,8 @@ export const CONSULTATION_FORMS = [
   { id: 'post_endodontic', label: 'Post Endodontic Restorations', file: '/consultation-forms/post-endodontic-restorations.pdf' },
   { id: 'endodontic_surgery', label: 'Endodontic Surgery', file: '/consultation-forms/endodontic-surgery.pdf' },
   { id: 'esthetic', label: 'Esthetic Procedures', file: '/consultation-forms/esthetic-procedures.pdf' },
+  { id: 'periodontics_scaling_root_planing', label: 'Scaling and Root Planing Consent', file: '/consultation-forms/Clear_Periodontics_Scaling_Root_Planing_Consent_Form.pdf' },
+  { id: 'periodontics_informed_consent', label: 'Periodontics Informed Consent', file: '/consultation-forms/Periodontics_Consent_Form.pdf.pdf' },
   { id: 'tooth_extraction', label: 'Tooth Extraction', file: '/consultation-forms/tooth-extraction.pdf' },
 ]
 

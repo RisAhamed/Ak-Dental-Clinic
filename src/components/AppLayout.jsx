@@ -11,22 +11,13 @@ import {
 } from 'lucide-react'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
 import { CLINIC_NAME, CLINIC_SUBTITLE } from '../lib/config'
+import { CONSULTATION_FORMS } from '../lib/consultationForms'
 
 const navigationItems = [
   { label: 'Dashboard', path: '/', icon: LayoutDashboard, aliases: ['/dashboard'] },
   { label: 'Patients', path: '/patients', icon: Users },
   { label: 'Doctors', path: '/doctors', icon: Stethoscope },
   { label: 'Payments', path: '/payments', icon: IndianRupee },
-]
-
-// Consultation forms available in public/consultation-forms
-const consultationForms = [
-  { label: 'Endodontic surgery', file: '/consultation-forms/endodontic-surgery.pdf' },
-  { label: 'Aesthetic procedure', file: '/consultation-forms/esthetic-procedures.pdf' },
-  { label: 'Post-endodontic restoration', file: '/consultation-forms/post-endodontic-restorations.pdf' },
-  { label: 'Restoration', file: '/consultation-forms/restoration.pdf' },
-  { label: 'Root canal treatment', file: '/consultation-forms/root-canal-treatment.pdf' },
-  { label: 'Tooth extraction', file: '/consultation-forms/tooth-extraction.pdf' },
 ]
 
 const prescriptionPads = [
@@ -70,7 +61,7 @@ function AppLayout() {
           onNavigate={closeMobileSidebar}
           onToggle={() => setSidebarOpen((current) => !current)}
           currentPath={location.pathname}
-          consultationForms={consultationForms}
+          consultationForms={CONSULTATION_FORMS}
         />
       </aside>
 
@@ -108,7 +99,7 @@ function AppLayout() {
             onNavigate={closeMobileSidebar}
             expanded
             currentPath={location.pathname}
-            consultationForms={consultationForms}
+            consultationForms={CONSULTATION_FORMS}
           />
         </aside>
       </div>
@@ -221,7 +212,7 @@ function Logo({ expanded = false }) {
 
 function SidebarNav({ onNavigate, expanded = false, currentPath = '', consultationForms = [] }) {
   return (
-    <nav className="flex flex-col h-full px-2 py-4">
+      <nav className="flex min-h-0 flex-1 flex-col overflow-y-auto overscroll-contain px-2 py-4 [touch-action:pan-y]">
       <div className="space-y-1">
         {navigationItems.map((item) => {
           const Icon = item.icon
